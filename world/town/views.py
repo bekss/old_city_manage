@@ -16,7 +16,7 @@ def index(request):
 def register(request):
     registered = False
     if request.method == 'POST':
-        user_form = UserForm(data=request.POST or None)
+        user_form = UserForm(data=request.POST)
         profile_form = UserProfileInfoForm(data=request.POST)
         if user_form.is_valid() and profile_form.is_valid():
             user = user_form.save()
@@ -42,6 +42,7 @@ def register(request):
 
 @csrf_protect
 def user_login(request):
+    error ={}
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -53,7 +54,9 @@ def user_login(request):
             else:
                 return HttpResponse('Ваш аккаунт не активный')
         else:
-            return HttpResponse('Эти  данные для входа использутся')
+            error['error_login'] = 'Вы ввели неверные данные'
+            return render(request, 'index_login.html',{'error_login':error['error_login']})
+            # return HttpResponseRedirect(reverse('user_login'))
     else:
         return render(request, 'index_login.html')
 

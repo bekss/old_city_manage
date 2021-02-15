@@ -21,6 +21,7 @@ pyOpenSSL = "==20.0.1"
 pyTelegramBotAPI = "==3.7.6"
 django = "*"
 django-seed = "*"
+psycopg2 = "*"
 
 [dev-packages]
 

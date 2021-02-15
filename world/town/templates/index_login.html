@@ -15,6 +15,9 @@
                         <label for="InputPassword" class="form-label">Пароль</label>
                         <input type="password" class="form-control" name="password" id="InputPassword">
                     </div>
+                    {% if not user.is_authenticated %}
+                        <li class="text-danger list-unstyled m-2" >{{ error_login }}</li>
+                    {% endif %}
                     <button type="submit" class="btn btn-primary" value="Войти">Войти</button>
                 </form>
             </div>
