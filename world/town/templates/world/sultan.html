@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block search %}
+    <div class="mx-auto mt-5 " style="width: 900px;margin-top: ">
+       <form class="d-flex mx-auto">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+{% endblock %}
+{% block sultan %}
+    {% for item in sultan_list %}
+        <ul class="list-group m-3 ">
+            <li class="list-group-item link-primary"> Султаны:</li>
+            <li class="list-group-item link-dark"> id - <span class=" link-danger">{{ item.id }}</span></li>
+            <li class="list-group-item link-dark"> Имя Султана  -  <span class=" link-danger">{{ item.name }}</span></li>
+            <li class="list-group-item link-dark">Фамиля Султана  -   <span class=" link-danger">{{ item.lname }}</span></li>
+        </ul>
+    {% endfor %}
+{% endblock sultan %}
+
+{% block vazir %}
+    {% for item in vazir_list %}
+         <ul class="list-group m-3 ">
+             <li class="list-group-item link-primary"> Вазиры:</li>
+            <li class="list-group-item link-dark"> id - <span class=" link-danger">{{ item.id }}</span></li>
+            <li class="list-group-item link-dark"> Имя Султана  -  <span class=" link-danger">{{ item.name }}</span></li>
+            <li class="list-group-item link-dark">Фамиля Султана  -   <span class=" link-danger">{{ item.lname }}</span></li>
+            <li class="list-group-item link-dark"> Статус - <span class=" link-danger">{{ item.status }}</span></li>
+            <li class="list-group-item link-dark"> Зарплата - <span class=" link-danger">{{ item.many }}</span></li>
+             <li class="list-group-item link-info"> Султан id - <span class=" link-danger">{{ item.Sultan_id }}</span></li>
+            <li class="list-group-item link-info"> Имя Султана которому служит - <span class=" link-danger">{{ item.Sultan }}</span></li>
+        </ul>
+    {% endfor %}
+{% endblock vazir %}
+
+{% block rysar %}
+    {% for item in rysar_list %}
+         <ul class="list-group m-3 ">
+            <li class="list-group-item link-primary"> Рыцари:</li>
+            <li class="list-group-item link-dark"> id - <span class=" link-danger">{{ item.id }}</span></li>
+            <li class="list-group-item link-dark"> Имя Рыцаря  -  <span class=" link-danger">{{ item.name }}</span></li>
+            <li class="list-group-item link-dark">Фамиля Рыцаря  -   <span class=" link-danger">{{ item.lname }}</span></li>
+            <li class="list-group-item link-info"> Солдат помощник - <span class=" link-danger">{{ item.soldat_id }}</span></li>
+            <li class="list-group-item link-info"> Имя солдата помощника: - <span class=" link-danger">{{ item.soldat }}</span></li>
+        </ul>
+    {% endfor %}
+{% endblock %}
+
+
+{% block soldat %}
+    {% for item in soldat_list %}
+         <ul class="list-group m-3">
+            <li class="list-group-item link-primary"> Солдаты:</li>
+            <li class="list-group-item link-dark"> id -  <span class=" link-danger">{{ item.id }}</span></li>
+            <li class="list-group-item link-dark"> Имя Солдата  -  <span class=" link-danger">{{ item.name }}</span></li>
+            <li class="list-group-item link-dark">Фамиля Солдата  -   <span class=" link-danger">{{ item.lname }}</span></li>
+            <li class="list-group-item link-info"> Слуга Солдата ID - {{ item.rab_id }}</li>
+            <li class="list-group-item link-info"> Имя Слуги -  {{ item.rab }}</li>
+        </ul>
+    {% endfor %}
+{% endblock %}
+
+{% block rab %}
+    {% for item in rab_list %}
+        <ul class="list-group m-3">
+            <li class="list-group-item link-primary"> Рабы</li>
+            <li class="list-group-item link-dark"> id - <span class=" link-danger">{{ item.id }}</span></li>
+            <li class="list-group-item link-dark"> Имя Раба  -  <span class=" link-danger">{{ item.name }}</span></li>
+            <li class="list-group-item link-dark">Фамиля Раба  -   <span class=" link-danger">{{ item.lname }}</span></li>
+
+        </ul>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block login %}
+    <div class="container mt-5">
+        <div class="col-md-8 mx-auto mt-5">
+            <div class="text-center fs-2">Войти</div>
+            <div class="jumbotron">
+                <form method="post" action="{% url 'user_login' %}">
+                    {% csrf_token %}
+                    <div class="mb-2">
+                        <label for="InputName" class="form-label">Имя</label>
+                        <input type="text" class="form-control" name="username" id="InputName"
+                               aria-describedby="NameHelp" placeholder="Username">
+                    </div>
+                    <div class="mb-2">
+                        <label for="InputPassword" class="form-label">Пароль</label>
+                        <input type="password" class="form-control" name="password" id="InputPassword">
+                    </div>
+                    <button type="submit" class="btn btn-primary" value="Войти">Войти</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

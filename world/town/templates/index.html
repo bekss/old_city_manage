@@ -1,0 +1,117 @@
+{% extends "base.html"%}
+{% load static %}
+{% block resume %}
+      <div id="particles-js">
+      <div class="header">
+        <h1>
+          <span class="site-title">Akylbekov Beksultan Akylbekovich</span>
+          <span class="site-description"
+            >Programmer • Web Developer • </span
+          >
+        </h1>
+        <div class="header-icons">
+          <a
+            aria-label="My LinkedIn Profile"
+            target="_blank"
+            href="https://www.linkedin.com/in/beksultan-akylbekov-234267155/"
+          >
+            <i class="icon fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a
+            aria-label="My Github Profile"
+            target="_blank"
+            href="https://github.com/bekss"
+          >
+            <i class="icon fa fa-github-alt" aria-hidden="true"></i>
+          </a>
+          <a
+            aria-label="My Résumé"
+            target="_blank"
+            href="https://assets/img/выфа.pdf"
+          >
+            <i class="icon fa fa fa-file-pdf-o" aria-hidden="true"></i>
+          </a>
+          <a
+            aria-label="Send Email"
+            href="mailto:beka.anon@gmail.com"
+            target="_blank"
+            ><i class="icon fa fa-envelope"></i
+          ></a>
+        </div>
+        <div class="header-links">
+          <a class="link" href="#about" data-scroll>About Me</a>
+          <a class="link" href="#projects" data-scroll>Projects</a>
+        </div>
+      </div>
+      <a class="down" href="#about" data-scroll
+        ><i class="icon fa fa-chevron-down" aria-hidden="true"></i
+      ></a>
+    </div>
+    <section id="about">
+
+          <div class="user-details">
+            <h1>My Story</h1>
+            <img
+              src="{% static "img/img.jpg" %}"
+              alt="Professional Me"
+              width="20%"
+            />
+            <p>
+              I am a web developer with 1 years of experience. I make landing sites, dynamic sites, Telegram, Instagram bots.
+            </p>
+          </div>
+
+
+          <div class="user">
+
+            <div class="tech">
+              <h2>Languages</h2>
+              <i class="devicon-python-plain colored"></i>
+              <p>
+                My favorite languages for systems programming, web automation, and
+                data analysis.
+              </p>
+            </div>
+
+            <div class="tech">
+              <h2>Front-End</h2>
+              <i class="devicon-bootstrap-plain colored"></i>
+              <i class="devicon-html5-plain-wordmark colored"></i>
+              <i class="devicon-css3-plain-wordmark colored"></i>
+              <i class="devicon-sass-original colored"></i>
+              <p>
+                My preferred technologies for front-end web development and
+                component design.
+              </p>
+            </div>
+
+            <div class="tech">
+              <h2>Back-End</h2>
+              <i class="devicon-django-line"></i>
+              <i class="devicon-mysql-plain-wordmark colored"></i>
+              <i class="devicon-postgresql-plain-wordmark colored"></i>
+              <i class="devicon-linux-plain colored"></i>
+              <p>
+                My preferred technologies for back-end web programming and database
+                architecture.
+              </p>
+            </div>
+
+            <div class="tech">
+              <h2>Tools</h2>
+              <i class="devicon-git-plain colored"></i>
+              <i class="devicon-visualstudio-plain colored"></i>
+              <i class="devicon-github-plain colored"></i>
+              <i class="devicon-pycharm-plain colored"></i>
+              <p style="width:200px;">
+                My favorite tools for version control, code editing.
+
+              </p>
+            </div>
+          </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; Akylbekov Beksultan Akylbekovich 2021</p>
+    </footer>
+{% endblock resume %}
